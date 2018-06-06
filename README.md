@@ -10,24 +10,26 @@ I wrote raining.py because:
 
 3. I needed to test some basic networking functions on a lab network
 
+There is no warranty. I made this for fun, OK?
+
 ## Dependencies
 
-raining.py uses the netaddr library for comparing IP addresses.
+raining.py uses the [netaddr library](https://netaddr.readthedocs.io/en/latest/) for comparing IP addresses.
 
 ## Requirements
 
-You will need a working internet connection. You will also need an API key for the Open Weather API, which is free for limited access. The script assumes a user from a public IP address, and it will return a default location to localhost or private network addresses.
+You will need a working internet connection. You will also need an API key for the [Open Weather Map API](https://openweathermap.org/api), which is free for limited access. The script assumes a user from a public IP address, and it will return a default location to localhost or private network addresses.
 
 ## Launching the Service
 
-$ python raining.py _port_
+$ python raining.py &lt;port&gt;
 
 Be sure to specify a port that is not already in use, or the script will return an error. Terminate by KeyboardInterrupt to close the port and ensure a graceful exit. The service will run indefinitely. It will log requests and processing information to stdout. The script ignores browser requests for favicon.ico.
 
 ## Use Cases
 
-Use raining.py to test internet connectivity. It can also be used to test security policies. Because the messages are unencrypted, it is easy to identify and inspect raining.py traffic in a packet capture. 
+Use raining.py to test internet connectivity. It can also be used to test security policies. Because the messages are unencrypted, it is easy to identify and inspect raining.py traffic in a packet capture. Plus who wants to walk all the way to a window to see if it's raining?
 
 ## Warnings
 
-This script is not intended to be robust or secure. Nothing is encrypted, so do not use it to send anything important. It will not be able to handle a large amount of requests at one time.
+This script is not intended to be robust or secure. Nothing is encrypted, so do not use it to send anything important. It will not be able to handle a large amount of requests at one time. Exception handling is not what you would call robust.
