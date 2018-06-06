@@ -20,7 +20,7 @@ You will need a working internet connection. You will also need an API key for t
 
 ## Launching the Service
 
-$ python raining.py <port>
+$ python raining.py _port_
 
 Be sure to specify a port that is not already in use, or the script will return an error. Terminate by KeyboardInterrupt to close the port and ensure a graceful exit. The service will run indefinitely. It will log requests and processing information to stdout. The script ignores browser requests for favicon.ico.
 
